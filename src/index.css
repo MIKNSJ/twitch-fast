@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+:root {
+    --color-hinted-grey-1: #0e0e10;
+    --color-hinted-grey-2: #18181b;
+    --color-hinted-grey-3: #1f1f23;
+    --color-twitch-purple-9: #9147ff;
+    --color-twitch-purple-10: #a970ff;
+    --color-opac-gd-1: rgba(83, 83, 95, 0.38);
+    --test-color: red;
+}
+
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: var(--color-hinted-grey-1);
+    color: white;
+}
