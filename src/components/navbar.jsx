@@ -8,7 +8,7 @@ import avatarIcon from "../assets/avatar_icon.png";
 export default function NavBar() {
     return (
         <>
-            <div className="bg-color-hinted-grey-2 flex justify-between items-center p-2 gap-2 shadow">
+            <div className="bg-color-hinted-grey-2 flex justify-between items-center p-2 gap-2 border-b border-black">
                 <div className="flex items-center gap-2 sm:gap-6">
                     <button className="flex">
                         <img className="block" src={twitchLogo} alt="twitch_icon" width={30} height={30}/>
@@ -19,7 +19,7 @@ export default function NavBar() {
                     </a>
                 </div>
                 <form className="flex items-center md:w-96">
-                    <input className="hidden md:block flex-grow bg-color-hinted-grey-2 px-2 py-1 border border-stone-500 hover:border-2 rounded-l outline-none" placeholder="Search" autoComplete="off"/>
+                    <input className="hidden md:block flex-grow bg-color-hinted-grey-2 px-2 py-1 border border-stone-500 rounded-l outline-none" placeholder="Search" autoComplete="off"/>
                     <button className="flex md:hidden bg-color-opac-gd-1 p-1 rounded">
                         <img src={searchIcon} alt="search_icon" width={26} height={26}/>
                     </button>
