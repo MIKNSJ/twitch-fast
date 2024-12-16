@@ -19,7 +19,7 @@ export default function NavBar() {
                     </a>
                 </div>
                 <form className="flex items-center md:w-96">
-                    <input className="hidden md:block flex-grow bg-color-hinted-grey-2 px-2 py-1 border border-stone-500 rounded-l outline-none" placeholder="Search" autoComplete="off"/>
+                    <input className="hidden md:block flex-grow bg-color-hinted-grey-2 px-2 py-1 border border-stone-500 rounded-l focus:outline focus:outline-[0.20rem] focus:outline-violet-400" placeholder="Search" autoComplete="off"/>
                     <button className="flex md:hidden bg-color-opac-gd-1 p-1 rounded">
                         <img src={searchIcon} alt="search_icon" width={26} height={26}/>
                     </button>
