@@ -11,7 +11,7 @@ import { RiFullscreenFill } from "react-icons/ri";
 export default function Hero() {
     return (
         <>
-            <div className="hidden lg:block relative flex-grow h-[22rem]">
+            <div className="hidden lg:block relative h-[22rem]">
                 <img className="absolute w-full h-full" src={twitchWallpaper} alt_icon="twitch_wallpaper"/>
                 <div className="flex justify-center items-center h-full">
                     <div className="flex shadow-lg">
@@ -39,8 +39,8 @@ export default function Hero() {
                                 </div>
                             </div>
                             <div className="flex text-xs font-bold gap-2">
-                                <h5 className="rounded-full px-2 py-1 text-zinc-300 bg-zinc-700">MusicTalk</h5>
-                                <h5 className="rounded-full px-2 py-1 text-zinc-300 bg-zinc-700">MusicEvents</h5>
+                                <a href="#" className="rounded-full px-2 py-1 text-zinc-300 bg-zinc-700 hover:bg-zinc-600">MusicTalk</a>
+                                <a href="#" className="rounded-full px-2 py-1 text-zinc-300 bg-zinc-700 hover:bg-zinc-600">MusicEvents</a>
                             </div>
                             <p className="text-sm">
                                 Tune in now for the official Rolling Loud music festival in Miami! Watch a star-studded
