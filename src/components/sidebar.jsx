@@ -43,8 +43,8 @@ function generateRecommendedChannels() {
 
     const gameNames = [
         "Batman: Arkham Knight",
-        "Grand Theft Auto V",
-        "Games + Demos",
+        "World of Warcraft",
+        "Minecraft",
         "Just Chatting",
         "Just Chatting",
         "Dark Souls",
@@ -90,12 +90,14 @@ function generateRecommendedChannels() {
 export default function Sidebar() {
     return (
         <>
-            <div className="bg-color-hinted-grey-3 w-12 md:w-60 min-h-screen flex flex-col gap-3">
-                <h5 className="hidden md:block uppercase px-2 pt-3 font-bold text-sm"> Recommended Channels </h5>
-                <nav className="flex flex-col items-center gap-1 pt-3 md:pt-0">
-                    <MdOutlineVideocam className="md:hidden" color={"white"} size={20}/>
-                    {generateRecommendedChannels()}
-                </nav>
+            <div className="bg-color-hinted-grey-3">
+                <div className="sticky top-16 z-10 w-12 md:w-60 flex flex-col gap-3">
+                    <h5 className="hidden md:block uppercase px-2 pt-3 font-bold text-sm"> Recommended Channels </h5>
+                    <nav className="flex flex-col items-center gap-1 pt-3 md:pt-0">
+                        <MdOutlineVideocam className="md:hidden" color={"white"} size={20}/>
+                        {generateRecommendedChannels()}
+                    </nav>
+                </div>
             </div>
         </>
     )

@@ -8,7 +8,7 @@ import avatarIcon from "../assets/avatar_icon.png";
 export default function NavBar() {
     return (
         <>
-            <div className="bg-color-hinted-grey-2 flex justify-between items-center p-2 gap-2 border-b border-black">
+            <div className="sticky top-0 z-20 bg-color-hinted-grey-2 flex justify-between items-center p-2 gap-2 border-b border-black">
                 <div className="flex items-center gap-2 sm:gap-6">
                     <button className="flex">
                         <img className="block" src={twitchLogo} alt="twitch_icon" width={30} height={30}/>

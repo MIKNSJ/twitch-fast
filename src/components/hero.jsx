@@ -12,7 +12,6 @@ export default function Hero() {
     return (
         <>
             <div className="hidden lg:block relative h-[22rem]">
-                <img className="absolute w-full h-full" src={twitchWallpaper} alt_icon="twitch_wallpaper"/>
                 <div className="flex justify-center items-center h-full">
                     <div className="flex shadow-lg">
                         <a href="#" className="relative">

@@ -12,9 +12,8 @@ import { VscVerifiedFilled } from "react-icons/vsc";
 
 
 
-function generateFeaturedChannels() {
-    const divFeaturedChannels = []
-
+const divFeaturedChannels = [];
+function generateChannels() {
     const channels = [
         {stream: caseStream, views: "15.7K", icon: caseIcon, title: "HARDCORE MINECRAFT", username: "caseoh_", game: "Minecraft"},
         {stream: oneGStream, views: "21.2K", icon: oneGIcon, title: "wow 60 hardcore stuff @starforgesystems", username: "summit1g", game: "World of Warcraft"},
@@ -52,21 +51,47 @@ function generateFeaturedChannels() {
             </div>
         )
     }
-
-    return divFeaturedChannels
 }
 
 
-export default function Featured() {
-    return (
-        <>
-            <div className="mt-5 lg:mt-0 px-7">
-                <a className="text-lg text-violet-300 font-bold" href="#">Live on Twitch</a>
+function generateMoreFeaturedChannels() {
+    if (divFeaturedChannels.length == 0) {
+        generateChannels();
+    }
+    const divMoreFeaturedChannels = [];
+    const titles = [
+        "Recommended Minecraft Channels",
+        "New Games",
+        "MMORPGs",
+        "Recommended Path of Exile 2 Channels",
+        "Recommended World of Warcraft Channels",
+        "What's Hot",
+        "Recommended Popular Channels",
+        "Recommended Rising Channels",
+        "First-Person Shooters Channels",
+        "Battle Royale Channels"
+    ];
+
+    for (let i = 0; i < titles.length; i++) {
+        divMoreFeaturedChannels.push(
+            <div key={i} className="mt-5 lg:mt-0 px-7">
+                <a className="text-lg text-violet-300 font-bold" href="#">{titles[i]}</a>
                 <div className="mt-2 flex gap-2 justify-between items-center pb-4 overflow-x-scroll">
-                    {generateFeaturedChannels()}
+                    {divFeaturedChannels}
                 </div>
                 <div className="border border-b border-w-[0.05rem] border-neutral-800 rounded-full"></div>
             </div>
+        )
+    }
+
+    return divMoreFeaturedChannels
+}
+
+
+export default function MoreFeatured() {
+    return (
+        <>
+            {generateMoreFeaturedChannels()}
         </>
     )
 }
