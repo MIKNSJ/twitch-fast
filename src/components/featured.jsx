@@ -36,7 +36,7 @@ function generateFeaturedChannels() {
                         <img className="rounded-full self-start max-w-[3rem]" src={channels[i].icon} alt_icon={`${i}_icon`}/>
                     </a>
                     <div className="flex flex-col">
-                        <a href="#" className="text-sm font-bold hover:text-violet-500 w-60 truncate">{channels[i].title}</a>
+                        <a href="#" className="text-sm font-bold hover:text-violet-500 line-clamp-1">{channels[i].title}</a>
                         <a href="#" className="mt-2 flex gap-1">
                             <h5 className="text-xs text-neutral-300">{channels[i].username}</h5>
                             <VscVerifiedFilled color={"violet"}/>

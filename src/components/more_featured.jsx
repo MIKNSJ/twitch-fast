@@ -35,7 +35,7 @@ function generateChannels() {
                         <img className="rounded-full self-start max-w-[3rem]" src={channels[i].icon} alt_icon={`${i}_icon`}/>
                     </a>
                     <div className="flex flex-col">
-                        <a href="#" className="text-sm font-bold hover:text-violet-500 w-60 truncate">{channels[i].title}</a>
+                        <a href="#" className="text-sm font-bold hover:text-violet-500 line-clamp-1">{channels[i].title}</a>
                         <a href="#" className="mt-2 flex gap-1">
                             <h5 className="text-xs text-neutral-300">{channels[i].username}</h5>
                             <VscVerifiedFilled color={"violet"}/>
@@ -54,10 +54,22 @@ function generateChannels() {
 }
 
 
+function shuffleChannels(channels) {
+    // Fisher-Yates Algorithm
+    for (let i = channels.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = channels[i];
+        channels[i] = channels[j];
+        channels[j] = temp;
+    }
+}
+
+
 function generateMoreFeaturedChannels() {
-    if (divFeaturedChannels.length == 0) {
+    if (divFeaturedChannels.length === 0) {
         generateChannels();
     }
+
     const divMoreFeaturedChannels = [];
     const titles = [
         "Recommended Minecraft Channels",
@@ -73,11 +85,13 @@ function generateMoreFeaturedChannels() {
     ];
 
     for (let i = 0; i < titles.length; i++) {
+        const modifiedDivFeaturedChannels = [...divFeaturedChannels];
+        shuffleChannels(modifiedDivFeaturedChannels);
         divMoreFeaturedChannels.push(
             <div key={i} className="mt-5 lg:mt-0 px-7">
                 <a className="text-lg text-violet-300 font-bold" href="#">{titles[i]}</a>
                 <div className="mt-2 flex gap-2 justify-between items-center pb-4 overflow-x-scroll">
-                    {divFeaturedChannels}
+                    {modifiedDivFeaturedChannels}
                 </div>
                 <div className="border border-b border-w-[0.05rem] border-neutral-800 rounded-full"></div>
             </div>

@@ -41,13 +41,13 @@ function generateCategories() {
 
     for (let i = 0; i < categories.length; i++) {
         divCategories.push(
-            <div key={i} className="flex flex-col gap-2">
+            <div key={i} className="flex flex-col gap-2 w-full">
                 <a className="relative flex" href="#">
-                    <img className="max-w-[9.5rem] ease-in-out delay-1 duration-75 border-transparent hover:border-l-[7px] hover:border-b-[7px] hover:border-violet-700" src={categories[i].banner} alt_icon={`categories_${i}`}/>
+                    <img className="flex-grow min-w-[9.5rem]" src={categories[i].banner} alt_icon={`categories_${i}`}/>
                     {categories[i].status === "new" ? <h5 className="absolute rounded-full text-xs text-black px-2 bg-fuchsia-400 font-bold uppercase w-fit top-[0.6rem] right-[0.6rem]">New</h5> : null}
                 </a>
                 <div className="flex flex-col">
-                    <a href="#" className="text-sm font-bold hover:text-violet-500 w-36 truncate">{categories[i].title}</a>
+                    <a href="#" className="text-sm font-bold hover:text-violet-500 line-clamp-1">{categories[i].title}</a>
                     <h5 className="text-xs text-neutral-300">{categories[i].views} viewers</h5>
     
                     <div className="mt-2 flex text-xs font-bold gap-2">
